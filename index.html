@@ -66,29 +66,44 @@
         <section id="editor-preview">
             <div class="editor-mockup">
                 <div class="toolbar">
-                    <div class="tool-btn">⟲</div>
-                    <div class="tool-btn">⟳</div>
+                    <input type="file" id="upload-btn" accept="image/*" style="display: none;">
+                    <button class="tool-btn active" onclick="document.getElementById('upload-btn').click()">Upload Photo</button>
+                    
                     <div class="tool-spacer"></div>
-                    <div class="tool-btn active">Crop</div>
-                    <div class="tool-btn">Filters</div>
-                    <div class="tool-btn">Layers</div>
+                    
+                    <div class="resize-controls" style="display: flex; align-items: center; gap: 0.5rem;">
+                        <input type="number" id="resize-width" placeholder="W" style="width: 60px; padding: 0.3rem; border-radius: 4px; border: 1px solid var(--glass-border); background: var(--bg-dark); color: white;">
+                        <span style="color: var(--text-muted);">×</span>
+                        <input type="number" id="resize-height" placeholder="H" style="width: 60px; padding: 0.3rem; border-radius: 4px; border: 1px solid var(--glass-border); background: var(--bg-dark); color: white;">
+                        <button class="tool-btn" id="apply-resize-btn">Resize</button>
+                    </div>
+
+                    <div class="tool-spacer"></div>
+                    
+                    <button class="tool-btn active" id="download-btn" style="background: var(--accent);">Download</button>
                 </div>
                 <div class="canvas-area">
+                    <canvas id="photo-canvas" style="display: none; max-width: 100%; max-height: 100%; border-radius: 10px;"></canvas>
                     <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&q=80&w=800" alt="Editor Preview" id="preview-img">
                 </div>
                 <div class="sidebar">
                     <div class="control-group">
                         <label>Brightness</label>
-                        <input type="range" min="0" max="200" value="100">
+                        <input type="range" id="brightness" min="0" max="200" value="100">
                     </div>
                     <div class="control-group">
                         <label>Contrast</label>
-                        <input type="range" min="0" max="200" value="115">
+                        <input type="range" id="contrast" min="0" max="200" value="115">
                     </div>
                     <div class="control-group">
                         <label>Saturation</label>
-                        <input type="range" min="0" max="200" value="130">
+                        <input type="range" id="saturation" min="0" max="200" value="130">
                     </div>
+                    <div class="control-group">
+                        <label>Blur (px)</label>
+                        <input type="range" id="blur" min="0" max="20" value="0">
+                    </div>
+                    <button class="btn-primary" id="reset-btn" style="width: 100%; margin-top: 1rem; background: var(--glass); border: 1px solid var(--glass-border);">Reset Filters</button>
                 </div>
             </div>
         </section>
