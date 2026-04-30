@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LuminaEdit - Professional Photo Editing</title>
+    <meta name="description" content="LuminaEdit: The next generation of professional photo editing in your browser. Powerful, fast, and beautiful.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav id="main-nav">
+            <div class="logo">Lumina<span>Edit</span></div>
+            <ul class="nav-links">
+                <li><a href="#features">Features</a></li>
+                <li><a href="#editor">Editor</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+            </ul>
+            <button class="btn-primary" id="get-started-btn">Get Started</button>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero">
+            <div class="hero-content">
+                <h1>Transform Your Photos with <span>Lumina</span></h1>
+                <p>Experience the most advanced web-based photo editing suite. Professional tools, stunning filters, and AI-powered enhancements at your fingertips.</p>
+                <div class="hero-actions">
+                    <button class="btn-large" id="launch-editor-btn">Launch Editor</button>
+                    <button class="btn-secondary" id="view-demo-btn">View Demo</button>
+                </div>
+            </div>
+            <div class="hero-image-container">
+                <div class="hero-image-blob"></div>
+                <img src="https://images.unsplash.com/photo-1542038784456-1ea8e935640e?auto=format&fit=crop&q=80&w=1000" alt="Professional Photo Editing" id="hero-main-image">
+            </div>
+        </section>
+
+        <section id="features">
+            <div class="section-title">
+                <h2>Professional Features</h2>
+                <div class="title-underline"></div>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">✨</div>
+                    <h3>AI Enhancement</h3>
+                    <p>Automatically improve lighting, color, and clarity with our proprietary AI models.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎨</div>
+                    <h3>Smart Filters</h3>
+                    <p>Apply cinematic LUTs and artistic filters to give your photos a unique look.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">✂️</div>
+                    <h3>Precision Tools</h3>
+                    <p>Advanced cropping, retouching, and layer management for complete control.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="editor-preview">
+            <div class="editor-mockup">
+                <div class="toolbar">
+                    <div class="tool-btn">⟲</div>
+                    <div class="tool-btn">⟳</div>
+                    <div class="tool-spacer"></div>
+                    <div class="tool-btn active">Crop</div>
+                    <div class="tool-btn">Filters</div>
+                    <div class="tool-btn">Layers</div>
+                </div>
+                <div class="canvas-area">
+                    <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&q=80&w=800" alt="Editor Preview" id="preview-img">
+                </div>
+                <div class="sidebar">
+                    <div class="control-group">
+                        <label>Brightness</label>
+                        <input type="range" min="0" max="200" value="100">
+                    </div>
+                    <div class="control-group">
+                        <label>Contrast</label>
+                        <input type="range" min="0" max="200" value="115">
+                    </div>
+                    <div class="control-group">
+                        <label>Saturation</label>
+                        <input type="range" min="0" max="200" value="130">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">Lumina<span>Edit</span></div>
+            <p>&copy; 2026 LuminaEdit. Built for photographers.</p>
+            <div class="social-links">
+                <a href="#">Twitter</a>
+                <a href="#">Instagram</a>
+                <a href="https://github.com/wasifahmad786">GitHub</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
